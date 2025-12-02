@@ -5,6 +5,7 @@ const menuItems = [
   { href: "/docs", label: "Get Started" },
   { href: "/docs/installation", label: "Installation" },
   { href: "/docs/theming", label: "Theming" },
+  { href: "/docs/theme-customization", label: "Theme Customization" },
   { href: "/docs/button", label: "Button" },
   { href: "/docs/card", label: "Card" },
 ];
