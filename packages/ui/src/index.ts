@@ -1,6 +1,6 @@
 // Components
 export { Button } from "./components/Button";
-export { Card, CardHeader, CardContent } from "./components/Card";
+export { Card, CardHeader, CardContent, CardFooter } from "./components/Card";
 
 // Themes
 export { defaultTheme, darkTheme } from "./themes/defaults";
