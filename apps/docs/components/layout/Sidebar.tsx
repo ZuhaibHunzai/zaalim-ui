@@ -4,9 +4,12 @@ import { useState } from "react";
 
 const menuItems = [
   { href: "/docs", label: "Get Started" },
-  { href: "/docs/installation", label: "Installation" },
-  { href: "/docs/theming", label: "Theming" },
-  { href: "/docs/theme-customization", label: "Theme Customization" },
+  { href: "/docs/get-started/installation", label: "Installation" },
+  { href: "/docs/get-started/theming", label: "Theming" },
+  {
+    href: "/docs/get-started/theme-customization",
+    label: "Theme Customization",
+  },
 ];
 
 const foundationComponents = [
@@ -18,16 +21,24 @@ const foundationComponents = [
 ];
 
 const formComponents = [
-  { href: "/docs/components/button", label: "Button", available: true },
-  { href: "/docs/components/input", label: "InputDocs", available: true },
-  { href: "/docs/components/textarea", label: "Textarea", available: true },
-  { href: "/docs/components/select", label: "Select", available: true },
-  { href: "/docs/components/checkbox", label: "Checkbox", available: true },
-  { href: "/docs/components/radio", label: "Radio", available: false },
-  { href: "/docs/components/toggle", label: "Toggle", available: false },
-  { href: "/docs/components/slider", label: "Slider", available: false },
+  { href: "/docs/components/forms/button", label: "Button", available: true },
+  { href: "/docs/components/forms/input", label: "InputDocs", available: true },
   {
-    href: "/docs/components/datepicker",
+    href: "/docs/components/forms/textarea",
+    label: "Textarea",
+    available: true,
+  },
+  { href: "/docs/components/forms/select", label: "Select", available: true },
+  {
+    href: "/docs/components/forms/checkbox",
+    label: "Checkbox",
+    available: true,
+  },
+  { href: "/docs/components/forms/radio", label: "Radio", available: false },
+  { href: "/docs/components/forms/toggle", label: "Toggle", available: false },
+  { href: "/docs/components/forms/slider", label: "Slider", available: false },
+  {
+    href: "/docs/components/forms/datepicker",
     label: "DatePicker",
     available: false,
   },
