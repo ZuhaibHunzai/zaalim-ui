@@ -34,8 +34,8 @@ const formComponents = [
     label: "Checkbox",
     available: true,
   },
-  { href: "/docs/components/forms/radio", label: "Radio", available: false },
-  { href: "/docs/components/forms/toggle", label: "Toggle", available: false },
+  { href: "/docs/components/forms/radio", label: "Radio", available: true },
+  { href: "/docs/components/forms/toggle", label: "Toggle", available: true },
   { href: "/docs/components/forms/slider", label: "Slider", available: false },
   {
     href: "/docs/components/forms/datepicker",
