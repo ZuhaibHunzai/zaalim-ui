@@ -40,5 +40,8 @@ export { Form, FormField, FormActions } from "./components/forms/Form";
 export { RangeSlider } from "./components/forms/RangeSlider";
 export { Toggle, ToggleGroup } from "./components/forms/Toggle";
 export { FileUpload } from "./components/forms/FileUpload";
+
+export { Box } from "./components/foundation/Box";
+// export { Chip, ChipProps} from "./components/DataDisplay/Chip";
 // Re-export everything for easy imports
 export * as ThemeUtils from "./utils/theme-builder";
