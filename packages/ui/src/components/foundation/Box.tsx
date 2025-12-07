@@ -4,11 +4,22 @@ import { useTheme } from "../../contexts/themeContext";
 export interface BoxProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
   className?: string;
+
+  // Simple variants for common use cases
   variant?: "surface" | "background" | "subtle" | "transparent";
+
+  // Border options
   border?: boolean;
   borderColor?: "default" | "brand" | "success" | "warning" | "error" | "info";
+
+  // Shadow
   shadow?: boolean | "sm" | "md" | "lg" | "xl";
+
+  // Rounded corners
   rounded?: boolean | "sm" | "md" | "lg" | "xl" | "full";
+
+  // Theme override (optional) - we'll handle this differently
+  themeMode?: "light" | "dark";
 }
 
 export const Box = ({
@@ -19,10 +30,11 @@ export const Box = ({
   borderColor = "default",
   shadow = false,
   rounded = false,
+  themeMode,
   style,
   ...props
 }: BoxProps) => {
-  const { theme } = useTheme(); // Just use the current theme
+  const { theme } = useTheme();
 
   // Build inline styles for theme-dependent properties
   const buildStyles = (): React.CSSProperties => {
