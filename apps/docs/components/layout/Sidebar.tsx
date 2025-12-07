@@ -14,10 +14,14 @@ const menuItems = [
 
 const foundationComponents = [
   { href: "/docs/components/typography", label: "Typography", available: true },
-  { href: "/docs/components/box", label: "Box", available: false },
+  {
+    href: "/docs/components/foundation/box",
+    label: "Box",
+    available: true,
+  },
   { href: "/docs/components/container", label: "Container", available: false },
-  { href: "/docs/components/grid", label: "Grid", available: false },
-  { href: "/docs/components/flex", label: "Flex", available: false },
+  { href: "/docs/components/foundation/grid", label: "Grid", available: true },
+  { href: "/docs/components/foundation/flex", label: "Flex", available: true },
 ];
 
 const formComponents = [
@@ -57,7 +61,7 @@ const formComponents = [
 
 const navigationComponents = [
   { href: "/docs/components/navbar", label: "Navbar", available: false },
-  { href: "/docs/components/menu", label: "Menu", available: false },
+  { href: "/docs/components/navigation/menu", label: "Menu", available: true },
   { href: "/docs/components/tabs", label: "Tabs", available: false },
   {
     href: "/docs/components/breadcrumbs",

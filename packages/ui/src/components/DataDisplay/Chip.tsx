@@ -3,7 +3,7 @@ import { useTheme } from "../../contexts/themeContext";
 import { Badge } from "./Badge";
 import { Avatar, AvatarProps } from "./Avatar";
 
-interface ChipProps {
+export interface ChipProps {
   children?: React.ReactNode;
   className?: string;
 

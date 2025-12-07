@@ -213,7 +213,7 @@ export const Avatar = ({
 };
 
 // Avatar Group Component
-interface AvatarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface AvatarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode;
   max?: number;
   spacing?: number;
