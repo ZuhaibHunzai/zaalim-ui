@@ -28,7 +28,6 @@ export type { BoxProps } from "./components/foundation/Box";
 export {
   Flex,
   Row,
-  Column,
   Center,
   Between,
   Wrap,
@@ -60,6 +59,32 @@ export type { BadgeProps } from "./components/DataDisplay/Badge";
 
 export { Chip } from "./components/DataDisplay/Chip";
 export type { ChipProps } from "./components/DataDisplay/Chip";
+export {
+  Table,
+  TableHeader,
+  TableFooter,
+  TablePagination,
+  TableCellAvatar,
+  TableCellStatus,
+  TableCellTags,
+  CompactTable,
+  CardTable,
+  BorderedTable,
+  SelectableTable,
+} from "./components/DataDisplay/Table";
+
+export type {
+  TableProps,
+  Column,
+  SortDirection,
+  TableHeaderProps,
+  TableFooterProps,
+  TablePaginationProps,
+  TableCellAvatarProps,
+  TableCellStatusProps,
+  TableCellTagsProps,
+  SelectableTableProps,
+} from "./components/DataDisplay/Table";
 
 export {
   List,
@@ -78,6 +103,50 @@ export type {
   ListLoadingProps,
 } from "./components/DataDisplay/List";
 
+export {
+  Accordion,
+  AccordionItem,
+  AccordionItemComponent,
+  CompactAccordion,
+  CardAccordion,
+  BorderedAccordion,
+  GhostAccordion,
+  SingleAccordion,
+  FAQAccordion,
+  StatsAccordion,
+} from "./components/DataDisplay/Accordion";
+
+export type {
+  AccordionProps,
+  AccordionItem as AccordionItemType,
+  AccordionItemProps,
+  AccordionItemCompositionProps,
+  FAQAccordionProps,
+  StatsAccordionProps,
+  StatsAccordionItem,
+} from "./components/DataDisplay/Accordion";
+
+export {
+  Timeline,
+  TimelineItemComponent,
+  CompactTimeline,
+  RichTimeline,
+  VerticalTimeline,
+  HorizontalTimeline,
+  ActivityTimeline,
+  ProgressTimeline,
+  StatusTimeline,
+} from "./components/DataDisplay/Timeline";
+
+export type {
+  TimelineProps,
+  TimelineItem as TimelineItemType,
+  TimelineItemCompositionProps,
+  ActivityTimelineProps,
+  ProgressTimelineProps,
+  ProgressTimelineItem,
+} from "./components/DataDisplay/Timeline";
+
 // Navigation Components
 export {
   Menu,
@@ -94,7 +163,66 @@ export type {
   MenuGroupProps,
   MenuHeaderProps,
 } from "./components/navigation/Menu";
+export type {
+  TabsProps,
+  TabListProps,
+  TabProps,
+  TabPanelProps,
+  TabGroupProps,
+  SimpleTabsProps,
+} from "./components/navigation/Tab";
+export type {
+  SidebarProps,
+  SidebarSectionProps,
+  CompactSidebarProps,
+} from "./components/navigation/Sidebar";
+export {
+  Navbar,
+  NavbarBrand,
+  NavbarSection,
+  NavbarDivider,
+  CompactNavbar,
+  CenteredNavbar,
+  NavbarWithSearch,
+} from "./components/navigation/Navbar";
 
+export type {
+  NavbarProps,
+  NavbarBrandProps,
+  NavbarSectionProps,
+  NavbarWithSearchProps,
+} from "./components/navigation/Navbar";
+export {
+  Breadcrumbs,
+  CompactBreadcrumbs,
+  SolidBreadcrumbs,
+  ChevronBreadcrumbs,
+  ResponsiveBreadcrumbs,
+  BreadcrumbItemComponent,
+} from "./components/navigation/Breadcrumbs";
+
+export type {
+  BreadcrumbsProps,
+  BreadcrumbItem,
+  BreadcrumbItemProps,
+  ResponsiveBreadcrumbsProps,
+} from "./components/navigation/Breadcrumbs";
+
+export {
+  Steps,
+  Stepper,
+  Wizard,
+  ProgressSteps,
+} from "./components/navigation/Steps";
+
+export type {
+  StepsProps,
+  Step,
+  StepStatus,
+  StepperProps,
+  WizardProps,
+  ProgressStepsProps,
+} from "./components/navigation/Steps";
 // Existing Components (keep what you already have)
 export { Button } from "./components/Button";
 export { Card, CardHeader, CardContent, CardFooter } from "./components/Card";
@@ -117,6 +245,16 @@ export { Radio, RadioGroup } from "./components/forms/Radio";
 export { DatePicker } from "./components/forms/DatePicker";
 export { TimePicker } from "./components/forms/TimePicker";
 export { Form, FormField, FormActions } from "./components/forms/Form";
+export {
+  SearchBox,
+  SearchBoxAutocomplete,
+  QuickSearch,
+} from "./components/forms/Searchbox";
+
+export type {
+  SearchBoxProps,
+  SearchBoxAutocompleteProps,
+} from "./components/forms/Searchbox";
 export { RangeSlider } from "./components/forms/RangeSlider";
 export { Toggle, ToggleGroup } from "./components/forms/Toggle";
 export { FileUpload } from "./components/forms/FileUpload";
