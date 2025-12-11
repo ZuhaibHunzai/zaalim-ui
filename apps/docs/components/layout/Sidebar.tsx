@@ -13,7 +13,11 @@ const menuItems = [
 ];
 
 const foundationComponents = [
-  { href: "/docs/components/typography", label: "Typography", available: true },
+  {
+    href: "/docs/get-started/typography",
+    label: "Typography",
+    available: true,
+  },
   {
     href: "/docs/components/foundation/box",
     label: "Box",
