@@ -1,7 +1,7 @@
 import React from "react";
 import { useTheme } from "../contexts/themeContext";
 
-interface CardProps {
+export interface CardProps {
   children: React.ReactNode;
   className?: string;
   padding?: "none" | "sm" | "md" | "lg";

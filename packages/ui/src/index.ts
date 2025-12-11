@@ -259,5 +259,127 @@ export { RangeSlider } from "./components/forms/RangeSlider";
 export { Toggle, ToggleGroup } from "./components/forms/Toggle";
 export { FileUpload } from "./components/forms/FileUpload";
 
+// ** Feedback components
+export {
+  Alert,
+  SuccessAlert,
+  WarningAlert,
+  ErrorAlert,
+  InfoAlert,
+  NeutralAlert,
+  InlineAlert,
+  ToastAlert,
+  BannerAlert,
+  ActionAlert,
+} from "./components/feedback/Alert";
+
+export type {
+  AlertProps,
+  ToastAlertProps,
+  ActionAlertProps,
+} from "./components/feedback/Alert";
+
+export {
+  Toast,
+  ToastProvider,
+  ToastContainer,
+  useToast,
+  useToastNotifications,
+  toast,
+} from "./components/feedback/Toast";
+
+export type {
+  ToastProps,
+  ToastOptions,
+  ToastPosition,
+  ToastProviderProps,
+} from "./components/feedback/Toast";
+
+export {
+  Progress,
+  SuccessProgress,
+  WarningProgress,
+  ErrorProgress,
+  InfoProgress,
+  BrandProgress,
+  LoadingProgress,
+  StepProgress,
+} from "./components/feedback/Progress";
+
+export type {
+  ProgressProps,
+  StepProgressProps,
+} from "./components/feedback/Progress";
+
+// Spinner Components
+export {
+  Spinner,
+  SuccessSpinner,
+  WarningSpinner,
+  ErrorSpinner,
+  InfoSpinner,
+  BrandSpinner,
+  PageLoader,
+  ButtonSpinner,
+  InlineSpinner,
+} from "./components/feedback/Spinner";
+
+export type {
+  SpinnerProps,
+  PageLoaderProps,
+} from "./components/feedback/Spinner";
+
+export {
+  Tooltip,
+  DarkTooltip,
+  LightTooltip,
+  BrandTooltip,
+  SimpleTooltip,
+  InfoTooltip,
+  ErrorTooltip,
+  ShortcutTooltip,
+  ControlledTooltip,
+} from "./components/feedback/Tooltip";
+
+export type {
+  TooltipProps,
+  TooltipPosition,
+  SimpleTooltipProps,
+  ShortcutTooltipProps,
+  ControlledTooltipProps,
+} from "./components/feedback/Tooltip";
+
+export {
+  Modal,
+  ConfirmationModal,
+  AlertModal,
+  FullscreenModal,
+  DrawerModal,
+  useModal,
+} from "./components/feedback/Modal";
+
+export type {
+  ModalProps,
+  ConfirmationModalProps,
+  DrawerModalProps,
+} from "./components/feedback/Modal";
+
+export {
+  Popover,
+  DropdownPopover,
+  MenuPopover,
+  TooltipPopover,
+  DatePopover,
+  ColorPopover,
+  usePopover,
+} from "./components/feedback/Popover";
+
+export type {
+  PopoverProps,
+  PopoverPosition,
+  DropdownPopoverProps,
+  DatePopoverProps,
+  ColorPopoverProps,
+} from "./components/feedback/Popover";
 // Re-export everything for easy imports
 export * as ThemeUtils from "./utils/theme-builder";
