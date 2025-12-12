@@ -381,5 +381,190 @@ export type {
   DatePopoverProps,
   ColorPopoverProps,
 } from "./components/feedback/Popover";
+
+// Utilities
+
+export { Portal } from "./components/utility/Portal";
+export type { PortalProps } from "./components/utility/Portal";
+// In packages/ui/src/index.ts - add these lines:
+
+// Divider Component
+export {
+  Divider,
+  SolidDivider,
+  DashedDivider,
+  DottedDivider,
+  VerticalDivider,
+  HorizontalDivider,
+  ThinDivider,
+  ThickDivider,
+  HalfDivider,
+  InsetDivider,
+  LabeledDivider,
+  CompactDivider,
+  SpaciousDivider,
+} from "./components/utility/Divider";
+
+export type {
+  DividerProps,
+  DividerVariant,
+  DividerOrientation,
+  DividerLength,
+  DividerWeight,
+} from "./components/utility/Divider";
+
+export {
+  Image,
+  RoundedImage,
+  CircleImage,
+  BorderedImage,
+  CoverImage,
+  ContainImage,
+  SquareImage,
+  WidescreenImage,
+  PortraitImage,
+  NextImageWrapper,
+} from "./components/utility/Image";
+export type {
+  ImageProps,
+  NextImageProps,
+  NextImageWrapperProps,
+} from "./components/utility/Image";
+
+export {
+  Link,
+  PrimaryLink,
+  SecondaryLink,
+  GhostLink,
+  UnderlineLink,
+  SmallLink,
+  LargeLink,
+  ExternalLink,
+  DisabledLink,
+  IconLink,
+  NavLink,
+  NextLinkWrapper,
+} from "./components/utility/Link";
+export type {
+  LinkProps,
+  NextLinkProps,
+  NavLinkProps,
+  NextLinkWrapperProps,
+  LinkVariant,
+  LinkSize,
+  LinkUnderline,
+} from "./components/utility/Link";
+
+export {
+  Icon,
+  IconWithBadge,
+  IconButton,
+  IconText,
+  IconTextLeft,
+  IconTextRight,
+  IconTextTop,
+  IconTextBottom,
+  PrimaryIconButton,
+  SecondaryIconButton,
+  OutlineIconButton,
+  GhostIconButton,
+  TextIconButton,
+  SmallIconButton,
+  LargeIconButton,
+  CircularIconButton,
+  SquareIconButton,
+} from "./components/utility/Icon";
+export type {
+  IconProps,
+  LucideIconName,
+  IconColor,
+  IconSize,
+  IconButtonProps,
+  IconButtonVariant,
+  IconButtonSize,
+  IconTextProps,
+} from "./components/utility/Icon";
+
+export {
+  Combobox,
+  PrimaryCombobox,
+  OutlineCombobox,
+  MultiCombobox,
+  SearchCombobox,
+  CreatableCombobox,
+} from "./components/advanced/Combobox";
+export type {
+  ComboboxProps,
+  ComboboxOption,
+  ComboboxVariant,
+  ComboboxSize,
+} from "./components/advanced/Combobox";
+export {
+  Autocomplete,
+  PrimaryAutocomplete,
+  OutlineAutocomplete,
+  AsyncAutocomplete,
+  FreeSoloAutocomplete,
+} from "./components/advanced/AutoComplete";
+export type {
+  AutocompleteProps,
+  AutocompleteOption,
+  AutocompleteSource,
+  AutocompleteVariant,
+  AutocompleteSize,
+} from "./components/advanced/AutoComplete";
+export {
+  Carousel,
+  CardCarousel,
+  GalleryCarousel,
+  AutoPlayCarousel,
+  InfiniteCarousel,
+  MultiSlideCarousel,
+  CenterModeCarousel,
+} from "./components/advanced/Carousel";
+export type {
+  CarouselProps,
+  CarouselItem,
+  CarouselVariant,
+  CarouselControlPosition,
+  CarouselTransition,
+} from "./components/advanced/Carousel";
+export {
+  DataGrid,
+  BorderedDataGrid,
+  StripedDataGrid,
+  CompactDataGrid,
+  SelectableDataGrid,
+  PaginatedDataGrid,
+} from "./components/advanced/DataGrid";
+export type {
+  DataGridProps,
+  DataGridVariant,
+  DataGridSize,
+  Alignment,
+} from "./components/advanced/DataGrid";
+// export {
+//   Chart,
+//   LineChart,
+//   BarChart,
+//   PieChart,
+//   DoughnutChart,
+//   AreaChart,
+//   ScatterChart,
+//   MinimalChart,
+//   GradientChart,
+//   useChartColors,
+//   generateChartData,
+// } from "./components/advanced/Chart";
+// export type {
+//   ChartProps,
+//   ChartDataset,
+//   ChartOptions,
+//   ChartType,
+//   ChartVariant,
+//   ChartSize,
+// } from "./components/advanced/Chart";
+// Re-export Lucide icons for convenience
+export * as LucideIcons from "lucide-react";
 // Re-export everything for easy imports
 export * as ThemeUtils from "./utils/theme-builder";
