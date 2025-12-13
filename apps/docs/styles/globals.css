@@ -1,3 +1,122 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap");
+
+:root {
+  --brand-50: 168 100% 96%;
+  --brand-100: 168 100% 93%;
+  --brand-200: 168 96% 82%;
+  --brand-300: 168 88% 67%;
+  --brand-400: 168 80% 56%;
+  --brand-500: 168 76% 60%;
+  --brand-600: 174 62% 30%;
+
+  --accent: 259 100% 74%;
+  --accent-foreground: 0 0% 100%;
+
+  --background: 200 25% 4%;
+  --background-subtle: 200 25% 6%;
+  --foreground: 180 60% 97%;
+
+  --card: 200 20% 7%;
+  --card-foreground: 180 60% 97%;
+
+  --popover: 200 20% 7%;
+  --popover-foreground: 180 60% 97%;
+
+  --primary: 168 76% 60%;
+  --primary-foreground: 174 62% 30%;
+
+  --secondary: 200 10% 15%;
+  --secondary-foreground: 180 20% 85%;
+
+  --muted: 200 15% 12%;
+  --muted-foreground: 200 15% 55%;
+
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 0 0% 100%;
+
+  --success: 142 71% 45%;
+  --warning: 43 96% 56%;
+  --info: 197 91% 60%;
+
+  --border: 200 20% 18%;
+  --border-hover: 200 20% 28%;
+  --input: 200 20% 18%;
+  --ring: 168 76% 60%;
+
+  --radius: 0.75rem;
+
+  --gradient-primary: linear-gradient(
+    135deg,
+    hsl(168 76% 60%),
+    hsl(259 100% 74%)
+  );
+  --gradient-glow: radial-gradient(
+    ellipse at center,
+    hsl(168 76% 60% / 0.15),
+    transparent 70%
+  );
+  --gradient-card: linear-gradient(
+    135deg,
+    hsl(200 20% 10% / 0.8),
+    hsl(200 20% 7% / 0.9)
+  );
+
+  --shadow-glow-sm: 0 0 20px hsl(168 76% 60% / 0.2);
+  --shadow-glow-md: 0 0 40px hsl(168 76% 60% / 0.25);
+  --shadow-glow-lg: 0 0 60px hsl(168 76% 60% / 0.3);
+  --shadow-glow-accent: 0 0 40px hsl(259 100% 74% / 0.25);
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: "Plus Jakarta Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+code,
+pre {
+  font-family: "JetBrains Mono", monospace;
+}
+
+.text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: var(--gradient-primary);
+}
+
+.glow-sm {
+  box-shadow: var(--shadow-glow-sm);
+}
+.glow-md {
+  box-shadow: var(--shadow-glow-md);
+}
+.glow-lg {
+  box-shadow: var(--shadow-glow-lg);
+}
+.glow-accent {
+  box-shadow: var(--shadow-glow-accent);
+}
+
+.glass {
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  background: hsl(var(--card) / 0.6);
+  border: 1px solid hsl(var(--border) / 0.5);
+}
+
+.glass-strong {
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  background: hsl(var(--card) / 0.8);
+  border: 1px solid hsl(var(--border) / 0.6);
+}
