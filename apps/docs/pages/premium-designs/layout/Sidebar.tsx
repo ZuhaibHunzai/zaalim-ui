@@ -6,8 +6,8 @@ import { usePathname } from "next/navigation";
 
 const designLinks = [
   { href: "/premium-designs", label: "Get Started", isHome: true },
-  { href: "/premium-designs/cards", label: "Cards", count: 12 },
-  { href: "/premium-designs/buttons", label: "Buttons", count: 8 },
+  { href: "/premium-designs/designs/Cards", label: "Cards", count: 10 },
+  { href: "/premium-designs/designs/Buttons", label: "Buttons", count: 50 },
   { href: "/premium-designs/inputs", label: "Inputs", count: 6 },
   { href: "/premium-designs/badges", label: "Badges", count: 5 },
   { href: "/premium-designs/avatars", label: "Avatars", count: 4 },
