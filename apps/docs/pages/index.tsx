@@ -1,4 +1,4 @@
-import HomePage from "./zaalim-ui/pages/Home";
+import HomePage from "./premium-designs/pages/Home";
 
 export default function Home() {
   return (
