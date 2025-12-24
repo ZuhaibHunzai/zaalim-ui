@@ -514,22 +514,6 @@ export type {
   AutocompleteSize,
 } from "./components/advanced/AutoComplete";
 export {
-  Carousel,
-  CardCarousel,
-  GalleryCarousel,
-  AutoPlayCarousel,
-  InfiniteCarousel,
-  MultiSlideCarousel,
-  CenterModeCarousel,
-} from "./components/advanced/Carousel";
-export type {
-  CarouselProps,
-  CarouselItem,
-  CarouselVariant,
-  CarouselControlPosition,
-  CarouselTransition,
-} from "./components/advanced/Carousel";
-export {
   DataGrid,
   BorderedDataGrid,
   StripedDataGrid,
@@ -543,27 +527,7 @@ export type {
   DataGridSize,
   Alignment,
 } from "./components/advanced/DataGrid";
-// export {
-//   Chart,
-//   LineChart,
-//   BarChart,
-//   PieChart,
-//   DoughnutChart,
-//   AreaChart,
-//   ScatterChart,
-//   MinimalChart,
-//   GradientChart,
-//   useChartColors,
-//   generateChartData,
-// } from "./components/advanced/Chart";
-// export type {
-//   ChartProps,
-//   ChartDataset,
-//   ChartOptions,
-//   ChartType,
-//   ChartVariant,
-//   ChartSize,
-// } from "./components/advanced/Chart";
+
 // Re-export Lucide icons for convenience
 export * as LucideIcons from "lucide-react";
 // Re-export everything for easy imports
