@@ -1,9 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Check, Copy, Github, Twitter, MessageCircle } from "lucide-react";
-import { useState } from "react";
-import { footerLinks, codeExample, themeConfigCode } from "./data";
+import { Check, Github, Twitter, MessageCircle } from "lucide-react";
 
 const themes = [
   {
@@ -11,57 +9,75 @@ const themes = [
     description: "Our signature cyan & purple theme",
     primary: "#4BE5D1",
     accent: "#9E7BFF",
-    background: "#0A0F12",
+    background: "hsl(var(--background))",
     isActive: true,
   },
   {
-    name: "Ember",
-    description: "Warm orange & coral vibes",
-    primary: "#FF6B35",
-    accent: "#FFB347",
-    background: "#0F0A0A",
+    name: "Ocean",
+    description: "Deep blues inspired by the sea",
+    primary: "#0EA5E9",
+    accent: "#06B6D4",
+    background: "hsl(var(--background))",
+    isActive: false,
   },
   {
-    name: "Ocean",
-    description: "Deep blue & teal harmony",
-    primary: "#0EA5E9",
-    accent: "#14B8A6",
-    background: "#0A0F14",
+    name: "Amber",
+    description: "Warm golden tones for comfort",
+    primary: "#F59E0B",
+    accent: "#DC2626",
+    background: "hsl(var(--background))",
+    isActive: false,
   },
   {
     name: "Rose",
-    description: "Elegant pink & purple blend",
-    primary: "#F43F5E",
-    accent: "#E879F9",
-    background: "#0F0A0D",
+    description: "Elegant pink and rose hues",
+    primary: "#EC4899",
+    accent: "#DB2777",
+    background: "hsl(var(--background))",
+    isActive: false,
   },
   {
     name: "Mint",
-    description: "Fresh green & lime combo",
-    primary: "#22C55E",
-    accent: "#84CC16",
-    background: "#0A0F0C",
+    description: "Fresh and calming green palette",
+    primary: "#10B981",
+    accent: "#059669",
+    background: "hsl(var(--background))",
+    isActive: false,
   },
   {
     name: "Sunset",
-    description: "Golden amber & warm hues",
-    primary: "#F59E0B",
+    description: "Vibrant orange to red gradient",
+    primary: "#F97316",
     accent: "#EF4444",
-    background: "#0F0D0A",
+    background: "hsl(var(--background))",
+    isActive: false,
   },
 ];
 
-// ============================================
-// THEMES SHOWCASE SECTION
-// ============================================
-export const ThemesShowcase = () => {
-  const [selectedTheme, setSelectedTheme] = useState(0);
+const footerLinks = {
+  Product: [
+    { label: "Features", href: "#features" },
+    { label: "Components", href: "#components" },
+    { label: "Themes", href: "#themes" },
+  ],
+  Resources: [
+    { label: "Documentation", href: "#docs" },
+    { label: "Examples", href: "#examples" },
+    { label: "Blog", href: "#blog" },
+  ],
+  Company: [
+    { label: "About", href: "#about" },
+    { label: "Contact", href: "#contact" },
+    { label: "Support", href: "#support" },
+  ],
+};
 
+export const ThemesShowcase = () => {
   return (
     <section className="relative py-32 px-4 overflow-hidden" id="themes">
       {/* Background Effect */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[1000px] h-[400px] bg-gradient-radial from-brand-500/10 to-transparent" />
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[1000px] h-[400px] bg-gradient-to-t from-cyan-500/5 to-transparent rounded-full blur-3xl" />
       </div>
 
       <div className="max-w-6xl mx-auto relative z-10">
@@ -73,11 +89,14 @@ export const ThemesShowcase = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-20"
         >
-          <span className="inline-block px-4 py-1.5 rounded-full glass text-sm text-primary mb-4">
+          <span className="inline-block px-4 py-1.5 rounded-full backdrop-blur-md bg-cyan-500/10 border border-cyan-500/20 text-sm text-cyan-500 mb-4">
             Themes
           </span>
           <h2 className="text-4xl sm:text-5xl font-bold mb-6">
-            Beautiful Themes, <span className="text-gradient">Zero Effort</span>
+            Beautiful Themes,{" "}
+            <span className="bg-gradient-to-r from-cyan-500 to-purple-500 bg-clip-text text-transparent">
+              Zero Effort
+            </span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Choose from our carefully crafted themes or create your own with a
@@ -94,24 +113,13 @@ export const ThemesShowcase = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group relative rounded-2xl overflow-hidden"
-              style={{ background: theme.background }}
+              className="group relative rounded-2xl overflow-hidden backdrop-blur-md bg-card/50 border border-cyan-500/20 hover:border-cyan-500/50 transition-all duration-300"
             >
-              {/* Gradient border effect */}
+              {/* Gradient overlay on hover */}
               <div
-                className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
                 style={{
-                  background: `linear-gradient(135deg, ${theme.primary}20, ${theme.accent}20)`,
-                }}
-              />
-
-              {/* Border */}
-              <div
-                className="absolute inset-0 rounded-2xl border transition-colors duration-300"
-                style={{
-                  borderColor: theme.isActive
-                    ? theme.primary
-                    : "hsl(var(--border))",
+                  background: `linear-gradient(135deg, ${theme.primary}15, ${theme.accent}15)`,
                 }}
               />
 
@@ -119,7 +127,7 @@ export const ThemesShowcase = () => {
                 {/* Color Preview */}
                 <div className="flex items-center gap-3 mb-4">
                   <div
-                    className="w-12 h-12 rounded-xl"
+                    className="w-12 h-12 rounded-xl shadow-lg"
                     style={{
                       background: `linear-gradient(135deg, ${theme.primary}, ${theme.accent})`,
                     }}
@@ -142,9 +150,7 @@ export const ThemesShowcase = () => {
                   <div>
                     <h3
                       className="text-lg font-semibold mb-1"
-                      style={{
-                        color: theme.isActive ? theme.primary : undefined,
-                      }}
+                      style={{ color: theme.primary }}
                     >
                       {theme.name}
                       {theme.isActive && (
@@ -152,10 +158,7 @@ export const ThemesShowcase = () => {
                           className="ml-2 inline-flex items-center justify-center w-5 h-5 rounded-full"
                           style={{ backgroundColor: theme.primary }}
                         >
-                          <Check
-                            className="w-3 h-3"
-                            style={{ color: theme.background }}
-                          />
+                          <Check className="w-3 h-3 text-background" />
                         </span>
                       )}
                     </h3>
@@ -166,18 +169,20 @@ export const ThemesShowcase = () => {
                 </div>
 
                 {/* Sample UI Preview */}
-                <div className="mt-4 p-4 rounded-xl border border-border/50 bg-background/50 space-y-3">
+                <div className="mt-4 p-4 rounded-xl border border-cyan-500/20 bg-background/50 space-y-3">
                   <div
-                    className="h-8 rounded-lg text-xs font-medium flex items-center justify-center"
+                    className="h-8 rounded-lg text-xs font-medium flex items-center justify-center text-background"
                     style={{
-                      backgroundColor: theme.primary,
-                      color: theme.background,
+                      background: `linear-gradient(to right, ${theme.primary}, ${theme.accent})`,
                     }}
                   >
                     Primary Button
                   </div>
                   <div className="flex gap-2">
-                    <div className="flex-1 h-6 rounded bg-muted/50" />
+                    <div
+                      className="flex-1 h-6 rounded"
+                      style={{ backgroundColor: `${theme.primary}30` }}
+                    />
                     <div
                       className="w-16 h-6 rounded"
                       style={{ backgroundColor: `${theme.accent}30` }}
@@ -194,15 +199,15 @@ export const ThemesShowcase = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.6 }}
-          className="mt-12 p-6 rounded-2xl glass-strong text-center"
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="mt-12 p-6 rounded-2xl backdrop-blur-md bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border border-cyan-500/20 text-center"
         >
           <p className="text-muted-foreground mb-2">
             Don't see your perfect theme?
           </p>
           <p className="text-foreground font-medium">
             Create your own by adding a simple{" "}
-            <code className="px-2 py-1 rounded bg-primary/10 text-primary font-mono text-sm">
+            <code className="px-2 py-1 rounded bg-cyan-500/20 text-cyan-500 font-mono text-sm">
               theme.config.ts
             </code>{" "}
             file
@@ -213,23 +218,20 @@ export const ThemesShowcase = () => {
   );
 };
 
-// ============================================
-// FOOTER SECTION
-// ============================================
-const Footer = () => {
+export const Footer = () => {
   return (
-    <footer className="border-t border-border py-16 px-4">
+    <footer className="border-t border-cyan-500/20 py-16 px-4 bg-background/50 backdrop-blur-md">
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
             <a href="/" className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-sm">
-                  Z
-                </span>
+              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-500 to-purple-500 flex items-center justify-center">
+                <span className="text-background font-bold text-sm">Z</span>
               </div>
-              <span className="font-bold text-lg">Zaalim UI</span>
+              <span className="font-bold text-lg text-foreground">
+                Zaalim UI
+              </span>
             </a>
             <p className="text-sm text-muted-foreground mb-4">
               Build beautiful UIs without the hassle.
@@ -237,19 +239,19 @@ const Footer = () => {
             <div className="flex items-center gap-3">
               <a
                 href="#"
-                className="p-2 rounded-lg hover:bg-secondary transition-colors text-muted-foreground hover:text-foreground"
+                className="p-2 rounded-lg hover:bg-cyan-500/10 transition-colors text-muted-foreground hover:text-cyan-500"
               >
                 <Github className="w-4 h-4" />
               </a>
               <a
                 href="#"
-                className="p-2 rounded-lg hover:bg-secondary transition-colors text-muted-foreground hover:text-foreground"
+                className="p-2 rounded-lg hover:bg-cyan-500/10 transition-colors text-muted-foreground hover:text-cyan-500"
               >
                 <Twitter className="w-4 h-4" />
               </a>
               <a
                 href="#"
-                className="p-2 rounded-lg hover:bg-secondary transition-colors text-muted-foreground hover:text-foreground"
+                className="p-2 rounded-lg hover:bg-cyan-500/10 transition-colors text-muted-foreground hover:text-cyan-500"
               >
                 <MessageCircle className="w-4 h-4" />
               </a>
@@ -259,13 +261,15 @@ const Footer = () => {
           {/* Links */}
           {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category}>
-              <h4 className="font-semibold text-sm mb-4">{category}</h4>
+              <h4 className="font-semibold text-sm mb-4 text-foreground">
+                {category}
+              </h4>
               <ul className="space-y-3">
                 {links.map((link) => (
                   <li key={link.label}>
                     <a
                       href={link.href}
-                      className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                      className="text-sm text-muted-foreground hover:text-cyan-500 transition-colors"
                     >
                       {link.label}
                     </a>
@@ -277,15 +281,15 @@ const Footer = () => {
         </div>
 
         {/* Bottom */}
-        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 border-t border-border">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 pt-8 border-t border-cyan-500/10">
           <p className="text-sm text-muted-foreground">
             © {new Date().getFullYear()} Zaalim UI. All rights reserved.
           </p>
           <div className="flex items-center gap-6 text-sm text-muted-foreground">
-            <a href="#" className="hover:text-foreground transition-colors">
+            <a href="#" className="hover:text-cyan-500 transition-colors">
               Privacy Policy
             </a>
-            <a href="#" className="hover:text-foreground transition-colors">
+            <a href="#" className="hover:text-cyan-500 transition-colors">
               Terms of Service
             </a>
           </div>
